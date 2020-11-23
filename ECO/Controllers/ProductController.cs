@@ -26,12 +26,12 @@ namespace ECO.Controllers
                 throw ex;
             }
         }
-        [HttpGet]
-        public JsonResult GetMultiProductByCategory(int categoryid)
+        public JsonResult GetMultiProductByCategory()
         {
+            int categoryid = Convert.ToInt32(TempData["keyword"]);
             try
             {
-                var response = _db.Products.Where(x => x.Status == true && x.CategoryID == categoryid).Skip(0).Take(20).OrderBy(x => x.Name).ToList();
+                var response = _db.Products.Where(x => x.Status == true && x.CategoryID == categoryid).OrderBy(x => x.Name).ToList();
                 return Json(response, JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)
@@ -39,9 +39,9 @@ namespace ECO.Controllers
                 throw ex;
             }
         }
-        [HttpGet]
-        public ActionResult GetMultiProductByCategory()
+        public ActionResult ProductByCategory(int id)
         {
+            TempData["keyword"] = id;
             return View();
         }
     }

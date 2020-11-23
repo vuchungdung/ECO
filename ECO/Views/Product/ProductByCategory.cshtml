@@ -1,10 +1,16 @@
-﻿<div class="products">
+﻿
+@{
+    ViewBag.Title = "ProductByCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="products">
     <h5 class="latest-product">LATEST PRODUCTS</h5>
     <a class="view-all" href="product.html">VIEW ALL<span> </span></a>
 </div>
-<div class="product-left" ng-controller="homeController">
+<div class="product-left" ng-controller="productController">
     <div class="grid wide">
-        <div ng-repeat="item in listProducts" class="col-md-4 chain-grid grid-top-chain" style="margin: 0px 20px 12px 0px">
+        <div ng-repeat="item in listProductByCategories" class="col-md-4 chain-grid grid-top-chain" style="margin: 0px 20px 12px 0px">
             <a href="single.html"><img class="img-responsive chain" src="~/images/ba.jpg" alt=" " /></a>
             <span class="star"> </span>
             <div class="grid-chain-bottom" style="height:140px">
@@ -33,3 +39,4 @@
         </div>
     </div>
 </div>
+

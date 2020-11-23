@@ -194,7 +194,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class=" top-nav rsidebar span_1_of_left" ng-controller="navbarController">
             <h3 class="cate">CATEGORIES</h3>
             <ul class="menu" ng-repeat="item in listCategories">
-                <li><a ng-click="getProductByCategory(item.Id)">{{item.Name}}</a></li>
+                <li><a href="/Product/ProductByCategory?id={{item.ID}}">{{item.Name}}</a></li>
             </ul>
         </div>
         <!--initiate accordion-->
@@ -324,5 +324,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="~/app/shared/ajaxService.js"></script>
     <script src="~/app/controller/homeController.js"></script>
     <script src="~/app/controller/navbarController.js"></script>
+    <script src="~/app/controller/productController.js"></script>
 </body>
 </html>
