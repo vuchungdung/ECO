@@ -5,7 +5,7 @@
 <div class="product-left" ng-controller="homeController">
     <div class="grid wide">
         <div ng-repeat="item in listProducts" class="col-md-4 chain-grid grid-top-chain" style="margin: 0px 20px 12px 0px">
-            <a href="single.html"><img class="img-responsive chain" src="~/images/ba.jpg" alt=" " /></a>
+            <a href="single.html"><img class="img-responsive chain" src="~/files/{{item.Image}}" alt=" " /></a>
             <span class="star"> </span>
             <div class="grid-chain-bottom" style="height:140px">
                 <h6><a href="single.html" style="font-size:12px">{{item.Name}}</a></h6>
