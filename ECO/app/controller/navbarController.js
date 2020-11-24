@@ -17,7 +17,7 @@
         $scope.getNavbar();
 
         $scope.getProductByCategory = function (id) {
-            ajaxService.get('/Product/GetMultiProductByCategory/id?=', id, function (res) {
+            ajaxService.get('/Product/GetMultiProductByCategory', null, function (res) {
                 $scope.listProductByCategories = res.data;
                 console.log($scope.listProducts);
             }, function (err) {
